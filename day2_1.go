@@ -8,7 +8,7 @@ import (
 var m = make(map[string]int,26)
 func Frequency(word string,wg *sync.WaitGroup)  {
 	for i:=0;i<len(word);i++ {
-		m[string(word[i])]+= 1
+		m[string(word[i])]++
 	}
 	wg.Done()
 }
